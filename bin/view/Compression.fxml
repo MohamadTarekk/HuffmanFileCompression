@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Compression">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="loadFile" mnemonicParsing="false" onAction="#load" text="Load..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="435.0" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Path:" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label fx:id="pathLabel" prefHeight="9.0" prefWidth="388.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="368.0">
+               <children>
+                  <Button fx:id="compressButton" mnemonicParsing="false" onAction="#compress" prefHeight="25.0" prefWidth="114.0" text="Compress" />
+                  <Region prefHeight="26.0" prefWidth="75.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="decompressButton" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#decompress" prefHeight="25.0" prefWidth="112.0" text="Decompress" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="37.0" prefWidth="435.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="112.0" text="System Message" textFill="GREY" underline="true" VBox.vgrow="NEVER">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="msgLabel" alignment="TOP_LEFT" prefHeight="12.0" prefWidth="422.0" text="Load a file" textFill="WHITE">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>
